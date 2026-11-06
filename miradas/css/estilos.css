@@ -14,7 +14,15 @@
   --fondo-pagina: #e2e9ee;
   --enlace: #1f6ea3;
   --fuente-grande: 'Trebuchet MS', Ubuntu, sans-serif;
-  --fuente-pixel: Silkscreen, monospace;
+  --fuente-pixel: 'VCR OSD Mono', monospace;
+}
+
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('../fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 * { box-sizing: border-box; }
@@ -102,8 +110,9 @@ img { display: block; max-width: 100%; }
 
 .cabecera p {
   margin: 10px 0 0;
-  font-weight: 700;
-  font-size: 11px;
+  font-family: var(--fuente-pixel);
+  font-weight: 400;
+  font-size: 17px;
   letter-spacing: .25em;
   color: #fff;
   text-shadow: -1px 0 #000, 1px 0 #000, 0 -1px #000, 0 1px #000;
@@ -489,13 +498,13 @@ img { display: block; max-width: 100%; }
 
   .contenedor { width: 100%; border: 0; box-shadow: none; }
 
-  .cabecera { height: 190px; }
+  .cabecera { height: 190px; background-position: 60% center; }
   .cabecera-titulo { left: 14px; top: 34px; }
   .cabecera h1 {
     font-size: 46px;
     text-shadow: -2px 0 #000, 2px 0 #000, 0 -2px #000, 0 2px #000, -2px -2px #000, 2px 2px #000, -2px 2px #000, 2px -2px #000;
   }
-  .cabecera p { font-size: 9px; }
+  .cabecera p { font-size: 11px; }
 
   .fila-video { flex-direction: column; }
   .video { align-self: stretch; }
