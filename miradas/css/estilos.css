@@ -345,6 +345,11 @@ img { display: block; max-width: 100%; }
 
 .foto-historia.visible { opacity: 1; }
 
+.foto-historia img {
+  width: 100%;
+  height: auto;
+}
+
 .foto-historia figcaption {
   display: flex;
   justify-content: space-between;
@@ -422,6 +427,82 @@ img { display: block; max-width: 100%; }
   aspect-ratio: 3 / 4;
   width: 100%;
   object-fit: cover;
+}
+
+.elenco .foto-marina-mora { object-position: 79% center; }
+.elenco .marco-juan-polo-recorte {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  overflow: hidden;
+}
+
+.elenco .foto-juan-polo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  --encuadre-horizontal: 55%;
+  --encuadre-vertical: 20%;
+  --zoom: 1.5;
+  --desplazamiento-vertical: 14%;
+  transform-origin: center;
+  object-position: var(--encuadre-horizontal) var(--encuadre-vertical);
+  transform: translateY(var(--desplazamiento-vertical)) scale(var(--zoom));
+}
+.elenco .marco-pedro-recorte {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  overflow: hidden;
+}
+
+.elenco .foto-pedro-lopez-raya {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 54% center;
+  transform: scale(1.1) translateY(4%);
+}
+.elenco .marco-adrian-recorte {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  overflow: hidden;
+}
+
+.elenco .foto-adrian-lopez {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.8);
+}
+
+.elenco .marco-andrea-recorte {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  overflow: hidden;
+}
+
+.elenco .foto-andrea-cabrera {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 35% center;
+  transform: translateY(-4%) scale(1.5);
+}
+
+.elenco .marco-juanma-recorte {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  overflow: hidden;
+}
+
+.elenco .foto-juanma-montero {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  --mover-horizontal: 5%;
+  --mover-vertical: -1%;
+  transform: translate(var(--mover-horizontal), var(--mover-vertical)) scale(1.9);
 }
 
 .elenco b { display: block; margin-top: 6px; }
