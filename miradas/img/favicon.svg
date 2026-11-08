@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <g
+       id="layer2">
+      <rect
+         style="display:none;fill:#000000;stroke:#ffffff;stroke-width:1.13921;stroke-linecap:round"
+         id="rect3"
+         width="503.32053"
+         height="486.80728"
+         x="8.6347046"
+         y="17.09549" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:533.333px;font-family:'VCR OSD Mono';-inkscape-font-specification:'VCR OSD Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:262.729;display:inline;fill:#ffffff;stroke:#000000;stroke-width:5.80911;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       x="188.76144"
+       y="154.21687"
+       id="text3"
+       transform="matrix(1.9278522,0,0,1.7879186,-337.83026,260.74011)"><tspan
+         x="188.76144"
+         y="154.21687"
+         id="tspan2"><tspan
+           style="font-size:400px"
+           id="tspan1">M</tspan></tspan></text>
+  </g>
+</svg>
