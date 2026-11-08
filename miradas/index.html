@@ -77,7 +77,7 @@
     <button class="pestana" role="tab" id="pestana-galeria" aria-controls="galeria" aria-selected="false" tabindex="-1">Galería</button>
 
     <figure class="foto-historia" id="foto-historia" aria-hidden="true">
-      <img src="img/playa.jpg" alt="Marina, en la playa de camposoto">
+      <img src="img/marinaplaya.JPG" alt="Marina, en la playa de camposoto">
       <figcaption><span>Mónica, en la playa de camposoto</span><span class="foto-historia-nota">toca para cerrar</span></figcaption>
     </figure>
   </nav>
@@ -89,7 +89,7 @@
         <div>
           <h2>La historia</h2>
           <p>Verano de 2005. Mónica y su padre, Jesús, van a la playa de Camposoto. Él lleva su videocámara en la mano y graba continuamente a su hija para conservarla para siempre en una cinta.</p>
-          <p>Año Nuevo de 2005. Jesús lleva la videocámara a casa de su padre, para grabar a su familia e inmortalizar ese momento.</p>
+          <p>Año Nuevo de 2005. Jesús lleva la videocámara a casa de su padre Antonio, para grabar a su familia e inmortalizar ese momento.</p>
         </div>
         <div>
           <h2>La canción</h2>
@@ -133,16 +133,55 @@
 
     <section id="galeria" role="tabpanel" aria-labelledby="pestana-galeria" hidden>
       <h2>Galería</h2>
-      <ul class="galeria">
-        <li><div class="foto"><img class="foto-camposoto" src="img/playa.jpg" alt="Camposoto"></div>Camposoto</li>
-        <li><div class="foto"><img class="foto-dirigiendo" src="img/dirigiendo.JPG" alt="Dirigiendo"></div>Dirigiendo</li>
-        <li><div class="foto foto-guitarra-marco"><img class="foto-preparando" src="img/guitarra.JPG" alt="Preparando para grabar"></div>Preparando para grabar</li>
-        <li><div class="foto"><img class="foto-atardecer" src="img/atardecer.jpg" alt="Rodando al atardecer"></div>Rodando al atardecer</li>
-        <li><div class="foto"><img class="foto-rodando-casa" src="img/rodando-casa.jpg" alt="Rodando en la casa"></div>Rodando en la casa</li>
-        <li><div class="foto"><img class="foto-actores-preparan" src="img/pedro.jpg" alt="Los actores se preparan"></div>Los actores se preparan</li>
-        <li><div class="foto"><img class="foto-cuaderno" src="img/mesa.jpg" alt="En la mesa"></div>En la mesa</li>
-        <li><div class="foto"><img class="foto-padre-hija" src="img/padre-hija.jpg" alt="Foto de un padre y su hija"></div>Foto de un padre y su hija</li>
-      </ul>
+      <div class="galeria-visor">
+        <figure class="galeria-principal">
+          <div class="galeria-escenario">
+            <img id="galeria-imagen" src="img/playa.jpg" alt="Camposoto" class="foto-camposoto">
+          </div>
+          <figcaption id="galeria-titulo" aria-live="polite">Camposoto</figcaption>
+        </figure>
+
+        <div class="galeria-controles">
+          <button class="galeria-control" type="button" data-galeria-anterior aria-label="Foto anterior">◀ Anterior</button>
+          <span class="galeria-contador" aria-live="polite">1 / 8</span>
+          <button class="galeria-control" type="button" data-galeria-siguiente aria-label="Foto siguiente">Siguiente ▶</button>
+        </div>
+
+        <div class="galeria-miniaturas" role="group" aria-label="Elegir foto de la galería">
+          <button class="galeria-miniatura" type="button" data-src="img/playa.jpg" data-alt="Camposoto" aria-pressed="true">
+            <img src="img/playa.jpg" alt="" class="foto-camposoto">
+            <span>Camposoto</span>
+          </button>
+          <button class="galeria-miniatura" type="button" data-src="img/dirigiendo.JPG" data-alt="Dirigiendo" aria-pressed="false">
+            <img src="img/dirigiendo.JPG" alt="" class="foto-dirigiendo">
+            <span>Dirigiendo</span>
+          </button>
+          <button class="galeria-miniatura" type="button" data-src="img/guitarra.jpg" data-alt="Preparando para grabar" aria-pressed="false">
+            <img src="img/guitarra.jpg" alt="" class="foto-preparando">
+            <span>Preparando</span>
+          </button>
+          <button class="galeria-miniatura" type="button" data-src="img/atardecer.jpg" data-alt="Rodando al atardecer" aria-pressed="false">
+            <img src="img/atardecer.jpg" alt="" class="foto-atardecer">
+            <span>Atardecer</span>
+          </button>
+          <button class="galeria-miniatura" type="button" data-src="img/rodando-casa.jpg" data-alt="Rodando en la casa" aria-pressed="false">
+            <img src="img/rodando-casa.jpg" alt="" class="foto-rodando-casa">
+            <span>Rodando en casa</span>
+          </button>
+          <button class="galeria-miniatura" type="button" data-src="img/pedro.jpg" data-alt="Los actores se preparan" aria-pressed="false">
+            <img src="img/pedro.jpg" alt="" class="foto-actores-preparan">
+            <span>Los actores</span>
+          </button>
+          <button class="galeria-miniatura" type="button" data-src="img/mesa.jpg" data-alt="En la mesa" aria-pressed="false">
+            <img src="img/mesa.jpg" alt="" class="foto-cuaderno">
+            <span>En la mesa</span>
+          </button>
+          <button class="galeria-miniatura" type="button" data-src="img/padre-hija.jpg" data-alt="Foto de un padre y su hija" aria-pressed="false">
+            <img src="img/padre-hija.jpg" alt="" class="foto-padre-hija">
+            <span>Padre e hija</span>
+          </button>
+        </div>
+      </div>
     </section>
   </main>
 

@@ -63,6 +63,68 @@
     mostrarFoto(false);
   });
 
+  var visorGaleria = document.querySelector('.galeria-visor');
+  if (visorGaleria) {
+    var imagenGaleria = document.getElementById('galeria-imagen');
+    var tituloGaleria = document.getElementById('galeria-titulo');
+    var contadorGaleria = visorGaleria.querySelector('.galeria-contador');
+    var miniaturas = Array.prototype.slice.call(visorGaleria.querySelectorAll('.galeria-miniatura'));
+    var indiceGaleria = 0;
+
+    function seleccionarFoto(indice) {
+      indiceGaleria = (indice + miniaturas.length) % miniaturas.length;
+      var miniatura = miniaturas[indiceGaleria];
+      var imagenMiniatura = miniatura.querySelector('img');
+
+      imagenGaleria.src = miniatura.getAttribute('data-src');
+      imagenGaleria.alt = miniatura.getAttribute('data-alt');
+      imagenGaleria.className = imagenMiniatura.className;
+      tituloGaleria.textContent = miniatura.querySelector('span').textContent;
+      contadorGaleria.textContent = (indiceGaleria + 1) + ' / ' + miniaturas.length;
+
+      miniaturas.forEach(function (elemento, i) {
+        elemento.setAttribute('aria-pressed', String(i === indiceGaleria));
+      });
+
+      if (window.matchMedia('(max-width: 640px)').matches) {
+        var tiraMiniaturas = miniatura.parentElement;
+        var rectTira = tiraMiniaturas.getBoundingClientRect();
+        var rectMiniatura = miniatura.getBoundingClientRect();
+        var scrollObjetivo = tiraMiniaturas.scrollLeft +
+          rectMiniatura.left + rectMiniatura.width / 2 -
+          (rectTira.left + rectTira.width / 2);
+        var maxScroll = tiraMiniaturas.scrollWidth - tiraMiniaturas.clientWidth;
+
+        tiraMiniaturas.scrollTo({
+          left: Math.max(0, Math.min(scrollObjetivo, maxScroll)),
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+        });
+      }
+    }
+
+    miniaturas.forEach(function (miniatura, i) {
+      miniatura.addEventListener('click', function () {
+        seleccionarFoto(i);
+      });
+    });
+
+    visorGaleria.querySelector('[data-galeria-anterior]').addEventListener('click', function () {
+      seleccionarFoto(indiceGaleria - 1);
+    });
+    visorGaleria.querySelector('[data-galeria-siguiente]').addEventListener('click', function () {
+      seleccionarFoto(indiceGaleria + 1);
+    });
+
+    seleccionarFoto(indiceGaleria);
+
+    visorGaleria.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      e.preventDefault();
+      seleccionarFoto(indiceGaleria + (e.key === 'ArrowRight' ? 1 : -1));
+      if (e.target.closest('.galeria-miniaturas')) miniaturas[indiceGaleria].focus();
+    });
+  }
+
   // Abrir directamente una pestaña desde el enlace (por ejemplo, miradas/#elenco).
   var inicial = document.getElementById('pestana-' + location.hash.slice(1));
   if (inicial) activar(inicial, { hash: false });
