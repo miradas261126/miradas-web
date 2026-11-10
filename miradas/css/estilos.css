@@ -277,10 +277,11 @@ img { display: block; max-width: 100%; }
   text-shadow: 0 -1px 0 rgba(0,0,0,.3);
 }
 
-.boton-youtube, .boton-youtube:hover {
-  background: linear-gradient(#fff, #ececec 50%, #dadada 50%, #efefef);
-  border: 1px solid #9a9a9a;
-  color: #222;
+.boton-apple-music, .boton-apple-music:hover {
+  background: linear-gradient(#f27ca9, #e34f86 50%, #c83270 50%, #dc3e7d);
+  border: 1px solid #a7255c;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
 }
 
 .caja-single-album {
