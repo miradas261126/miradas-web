@@ -260,6 +260,8 @@ img { display: block; max-width: 100%; }
   max-width: 220px;
 }
 
+.botones[hidden] { display: none; }
+
 .boton {
   display: block;
   padding: 6px 0;
