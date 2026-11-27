@@ -279,6 +279,13 @@ img { display: block; max-width: 100%; }
   text-shadow: 0 -1px 0 rgba(0,0,0,.3);
 }
 
+.boton-amazon-music, .boton-amazon-music:hover {
+  background: linear-gradient(#9fd2f2, #5eaee0 50%, #4298d1 50%, #58a8dc);
+  border: 1px solid #075d91;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+}
+
 .boton-apple-music, .boton-apple-music:hover {
   background: linear-gradient(#f27ca9, #e34f86 50%, #c83270 50%, #dc3e7d);
   border: 1px solid #a7255c;
